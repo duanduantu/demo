@@ -1,9 +1,8 @@
 <template>
   <div class="container">
-    <input type="text" :placeholder="title" />
-    <!--<div class="left"><slot name="text"></slot></div>-->
+    <input type="text" :placeholder="title" v-model="value" @change="inputValue"/>
     <div class="right">
-      <span class="iconfont">&#xe61c;</span>
+      <span class="iconfont" @click="deleteContent" >&#xe61c;</span>
     </div>
   </div>
 </template>
@@ -12,6 +11,19 @@ export default{
   name: 'inputRow',
   props: {
     title: String
+  },
+  data: function () {
+    return {
+      value: ''
+    }
+  },
+  methods: {
+    inputValue: function () {
+      this.$emit('fromData')
+    },
+    deleteContent: function () {
+      this.value = ''
+    }
   }
 }
 </script>
