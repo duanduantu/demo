@@ -75,13 +75,13 @@ export default{
   color:white
   .identify
     width:4rem
-    margin-left:0.37rem
+    margin-left:5%
     & >>> .right
       display:none
   .button-right
     float:right
     margin-top: -0.9rem
-    margin-right: 0.37rem
+    margin-right: 5%
   .verifyImage
     width: 2rem
     height: 0.8rem
